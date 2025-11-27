@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sound System Booking</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/constant.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="shortcut icon" href="img/IMG-20251101-WA0004.jpg" type="image/x-icon">
+</head>
+<body>
+    
+         <!-- navbar -->
+<header class="navbar">
+  <div class="navbar-container">
+    <style>
+:root {
+  --black: #000000;
+  --choco: #D2691E;
+}
+
+.tipee-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  background: var(--black);
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+.tipee-logo .icon {
+  width: clamp(40px, 8vw, 70px);
+  height: auto;
+}
+
+.tipee-logo .text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.tipee-logo .name {
+  font-size: clamp(20px, 4vw, 32px);
+  font-weight: 700;
+  color: var(--choco);
+}
+
+.tipee-logo .tagline {
+  font-size: 10px;
+  color: var(--choco);
+  opacity: 0.85;
+  letter-spacing: 0.5px;
+}
+
+.tipee-logo.light {
+  background: var(--choco);
+}
+
+.tipee-logo.light .name,
+.tipee-logo.light .tagline {
+  color: var(--black);
+}
+</style>
+
+<a href="">
+  <section class="tipee-logo" aria-label="Tipee — music promotion, events, sound and studio">
+  <svg class="icon" viewBox="0 0 64 64" role="img" aria-label="Speaker with chocolate sound waves">
+    <circle cx="16" cy="32" r="12" fill="var(--choco)" />
+    <circle cx="16" cy="32" r="6" fill="var(--black)" />
+    <path d="M32 24C36 28 36 36 32 40"
+          stroke="var(--choco)" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M40 20C46 28 46 36 40 44"
+          stroke="var(--choco)" stroke-width="2" fill="none" stroke-linecap="round"/>
+  </svg>
+  <div class="text" aria-hidden="true">
+    <div class="name">ByfiPlay</div>
+    <div class="tagline">music promotion · events · sound · studio</div>
+  </div>
+</section>
+
+    <nav class="nav-links">
+      <a href="#footer" class="login-btn">CONTACT</a>
+      <img src="img/menu-burger.png" alt="" class="hamburger">
+    </nav>
+  </div>
+  <section id="dropdownBox" class="animate__animated">
+             <div id="exitIcon">X</div>
+
+             <ul id="navcon-mobile">
+                <li><a href="artiste.html" target="_blank">Sell Your Music</a></li>
+                <li><a href="#fanbase" target="_blank">Album Launch</a></li>
+                <li><a href="artiste.html" target="_blank">Artist Services</a></li>
+                <li><a href="sound.html" target="_blank">Book Sound System</a></li>
+                <li><a href="artiste.html" target="_blank">Album Promotion</a></li>
+                <li><a href="sound.html" target="_blank">Book Stage & Lighting</a></li>
+                <li><a href="studio.html" target="_blank">Record a Track</a></li>
+                <li><a href="studio.html" target="_blank">Compile Your Album</a></li>
+                <li><a href="artiste.html" target="_blank">Upload Music</a></li>
+                <li><a href="#fanbase" target="_blank">Plan an Event</a></li>
+             </ul>
+    </section>
+</header>
+
+  <section class="hero">
+    <img src="img/audience-1853662.jpg" alt="Music Background" class="hero-img">
+    <div class="hero-text">
+      <h1>Your Sound, Our Expertise</h1>
+      <p>Seamless sound system, stage and stage light rentals and setup—perfect for every event, big or small.</p>
+      <center>
+        <a href="#sound" class="cta-button">Book Sound</a>
+      </center>
+    </div>
+  </section>
+
+  <section id="why-book-with-us" class="why-section">
+  <div class="wrap">
+    <h2 style="color: chocolate !important; font-size: 50px;">Why Book With Us</h2>
+    <div class="reasons">
+      <div class="reason">
+        <h3>Pro Engineers</h3>
+        <p>Experienced audio technicians ensure flawless setup and sound quality.</p>
+      </div>
+      <div class="reason">
+        <h3>Top-Quality Gear</h3>
+        <p>High-end speakers, mixers, and PA systems for every size of event.</p>
+      </div>
+      <div class="reason">
+        <h3>Customer-First Service</h3>
+        <p>Flexible packages and responsive support—midnight or midday.</p>
+      </div>
+    </div>
+
+    <div class="testimonials-gallery">
+      <blockquote class="testimonial">
+        “Our wedding reception sounded amazing—guests are still talking about it!”<footer>— Ayo & Tunde</footer>
+      </blockquote>
+      <div class="gallery">
+        <img src="img/IMG-20250806-WA0046.jpg" alt="Live event with speakers setup">
+        <img src="img/IMG-20250808-WA0077.jpg" alt="Live event with speakers setup">
+        <img src="img/IMG-20250808-WA0076.jpg" alt="Outdoor stage sound system">
+        <img src="img/nightclub-6686682.jpg" alt="Indoor corporate event audio setup">
+        <img src="img/IMG-20250808-WA0115.jpg" alt="Indoor corporate event audio setup">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="display: flex;">
+  <img src="img/IMG-20250808-WA0076.jpg" alt="" style="width: 50%;">
+  <img src="img/IMG-20250806-WA0046.jpg" alt="" style="width: 50%;">
+</section>
+
+  <!-- Booking section — drop this after your hero -->
+<section id="book-sound" class="booking-next">
+  <div class="wrap" id="sound">
+    <header class="bn-header">
+      <div class="bn-text">
+        <h2 style="color: chocolate !important; font-size: 50px;">Sound that makes the moment</h2>
+        <p>Pro sound systems, experienced engineers, and hassle-free setup — for concerts, weddings, conferences and parties.</p>
+      </div>
+      <div class="bn-kpis" aria-hidden="true">
+        <div><strong>10k+</strong><span>events</span></div>
+        <div><strong>24/7</strong><span>support</span></div>
+        <div><strong>Same‑day</strong><span>delivery</span></div>
+      </div>
+    </header>
+
+    <div class="bn-grid">
+      <!-- Packages column -->
+      <div class="packages" aria-labelledby="packages-heading">
+        <h3 id="packages-heading" class="sr-only">Packages</h3>
+
+        <ul class="package-list">
+          <!-- Card 1 -->
+          <li class="pkg-card">
+            <div class="pkg-header">
+              <h4>Compact</h4>
+              <div class="pkg-price"><span class="price">NGN 200K</span><small>/ day</small></div>
+            </div>
+            <p class="pkg-desc">Small gatherings & DJ booths — portable full-range PA, basic monitoring.</p>
+            <ul class="pkg-feats" aria-hidden="false">
+              <li>2 x speakers (active)</li>
+              <li>1 x mixer (4ch)</li>
+              <li>Basic technician</li>
+            </ul>
+            <button class="plan-btn">Choose Compact</button>
+          </li>
+
+          <!-- Card 2 -->
+          <li class="pkg-card recommended" aria-current="true">
+            <div class="pkg-header">
+              <h4>Pro</h4>
+              <div class="pkg-price"><span class="price">NGN 800K</span><small>/ day</small></div>
+            </div>
+            <p class="pkg-desc">Medium events & live bands — higher output, subwoofers, and full monitoring.</p>
+            <ul class="pkg-feats">
+              <li>4 x speakers + 2 subs</li>
+              <li>8‑channel mixer</li>
+              <li>Engineer + setup</li>
+            </ul>
+            <button class="plan-btn" style="background-color: chocolate;">Choose Pro</button>
+          </li>
+
+          <!-- Card 3 -->
+          <li class="pkg-card">
+            <div class="pkg-header">
+              <h4>Festival</h4>
+              <div class="pkg-price"><span class="price">NGN 1.5 Million</span><small>/ day</small></div>
+            </div>
+            <p class="pkg-desc">Large venues & outdoor stages — line arrays, power distribution, full crew.</p>
+            <ul class="pkg-feats">
+              <li>Line array PA</li>
+              <li>Digital FOH console</li>
+              <li>Full technical crew</li>
+            </ul>
+            <button class="plan-btn">Choose Festival</button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Quick booking form column -->
+      <aside class="quick-book" aria-labelledby="quick-book-heading">
+        <h3 id="quick-book-heading">Quick reserve</h3>
+        <form class="quick-form" action="/book" method="post" novalidate>
+          <label for="qb-name">Full name</label>
+          <input id="qb-name" name="name" type="text" required placeholder="Your name">
+
+          <label for="qb-email">Email</label>
+          <input id="qb-email" name="email" type="email" required placeholder="you@example.com">
+
+          <label for="qb-date">Event date</label>
+          <input id="qb-date" name="date" type="date" required>
+
+          <label for="qb-package">Package</label>
+          <select id="qb-package" name="package" required>
+            <option value="pro" selected>Pro —</option>
+            <option value="compact">Compact — </option>
+            <option value="festival">Festival —</option>
+          </select>
+
+          <label for="qb-notes" class="visually-hidden">Notes</label>
+          <textarea id="qb-notes" name="notes" rows="3" placeholder="Venue size, expected guests, special requests (optional)"></textarea>
+
+          <button type="submit" class="btn-primary wide"><a href="https://
+wa.link/fiolto?text=Hi!%20I’d%20like%20to%20book%20a%20sound%20system.%0A•%20Event%20Type:%0A•%20Event%20Date:%0A•%20Event%20Duration%20(hours):%0A•%20Number%20of%20Guests:%0A•%20Venue%20Location:%0A•%20Additional%20Notes:" target="_blank" rel="noopener noreferrer">
+  Request Availability
+</a>
+</button>
+
+          <p class="small-muted">No card required — we’ll confirm availability and send a quote.</p>
+        </form>
+      </aside>
+    </div>
+
+<section style="display: flex;">
+  <img src="img/IMG-20250808-WA0115.jpg" alt="" style="width: 50%;">
+  <img src="img/dua-lipa-1838653.jpg" alt="" style="width: 50%;">
+</section>
+
+    <!-- Modal Popup -->
+<div id="paymentModal" class="modal-overlay" aria-hidden="true">
+  <div class="modal-content" role="dialog" aria-modal="true">
+    <h2>Payment Details</h2>
+    <p>Please send payment to the following account:</p>
+    <pre>
+Account Name: OBINNA EPHRAIM JACOB
+Account Number: 6247102821
+Bank: Moniepoint
+    </pre>
+    <p>After your payment click on the button saying "i have made payment" and post the transaction reciept on live chat.</p>
+    <div class="timer">
+      Time left to complete payment: <span id="modalTimer">30:00</span>
+    </div>
+    <button id="paidBtn" class="btn" style="background-color: chocolate;">I have made payment</button>
+  </div>
+</div>
+
+<style>
+/* Pricing Section Styles */
+.pricing-section {
+  padding: 60px 20px;
+  text-align: center;
+  font-family: sans-serif;
+}
+.section-title { font-size: 2em; margin-bottom: 40px; }
+.pricing-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card {
+  background: #fff;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  width: 280px;
+  padding: 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform .3s, border-color .3s;
+}
+.card:hover { transform: translateY(-5px); border-color: #888; }
+.card.popular { border-color: chocolate; box-shadow: 0 8px 20px rgba(255,165,0,0.3); }
+.plan-btn {
+  padding: 12px 25px;
+  background: #444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.plan-btn:hover { background: #000; }
+
+/* Modal Overlay Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.modal-overlay.show {
+  display: flex;
+}
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+.timer {
+  margin: 1em 0;
+  font-size: 1.1em;
+}
+.btn {
+  padding: 10px 20px;
+  background: #444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.btn:hover { background: #000; }
+</style>
+
+<script>
+const planButtons = document.querySelectorAll('.plan-btn');
+const modal = document.getElementById('paymentModal');
+const timerDisplay = document.getElementById('modalTimer');
+const paidBtn = document.getElementById('paidBtn');
+let countdownInterval;
+
+planButtons.forEach(button => {
+  button.addEventListener('click', openPaymentModal);
+});
+
+function openPaymentModal() {
+  if (countdownInterval) clearInterval(countdownInterval);
+  modal.classList.add('show');
+  startTimer(30 * 60); // 30 minutes = 1800 seconds
+}
+
+function startTimer(durationInSeconds) {
+  let remaining = durationInSeconds;
+  updateTimerDisplay(remaining);
+  countdownInterval = setInterval(() => {
+    remaining--;
+    if (remaining <= 0) {
+      clearInterval(countdownInterval);
+      closeModal();
+    } else {
+      updateTimerDisplay(remaining);
+    }
+  }, 1000);
+}
+
+function updateTimerDisplay(seconds) {
+  const mins = String(Math.floor(seconds / 60)).padStart(2, '0');
+  const secs = String(seconds % 60).padStart(2, '0');
+  timerDisplay.textContent = `${mins}:${secs}`;
+}
+
+function closeModal() {
+  modal.classList.remove('show');
+  clearInterval(countdownInterval);
+}
+
+paidBtn.addEventListener('click', closeModal);
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) closeModal();
+});
+</script>
+
+
+<style>
+  .pricing-section {
+    padding: 60px 20px;
+    text-align: center;
+    font-family: sans-serif;
+  }
+  .section-title {
+    font-size: 2em;
+    margin-bottom: 40px;
+  }
+  .pricing-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .card {
+    background: #fff;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    width: 280px;
+    padding: 20px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform .3s, border-color .3s;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+    border-color: #888;
+  }
+  .card.popular {
+    border-color: chocolate;
+    box-shadow: 0 8px 20px rgba(37,211,102,0.3);
+  }
+  .card.popular .btn {
+    background: chocolate;
+    color: #fff;
+  }
+  .card h3 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+  }
+  .price {
+    font-size: 2em;
+    margin: 10px 0 20px;
+    color: #333;
+  }
+  .card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  .card li {
+    margin-bottom: 10px;
+  }
+  .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #444;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  .btn:hover {
+    background: #000;
+  }
+</style>
+
+    <footer class="bn-footer">
+      <p class="trust"><svg viewBox="0 0 24 24" class="lock" aria-hidden="true"><path d="M12 1C9.79 1 8 2.79 8 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-2V5c0-2.21-1.79-4-4-4z"></path></svg>
+      Secure bookings · Fully insured · Pro engineers</p>
+    </footer>
+  </div>
+</section>
+
+<!-- Styles (put in your CSS file or inside a <style> tag) -->
+<style>
+:root{
+  --bg:#0f1724;      /* optional page background contrast */
+  --card:#ffffff;
+  --muted:#6b7280;
+  --accent:#0b84ff;
+  --radius:12px;
+  --glass: rgba(255,255,255,0.03);
+  --shadow: 0 6px 20px rgba(2,6,23,0.2);
+  --max:1100px;
+  --pad:28px;
+  --gap:18px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* section root */
+.booking-next{ background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0)); padding:48px 20px; color: #0b1220; }
+.booking-next .wrap{ max-width:var(--max); margin:0 auto; }
+
+/* header */
+.bn-header{ display:flex; justify-content:space-between; gap:16px; align-items:center; margin-bottom:20px; flex-wrap:wrap; }
+.bn-text h2{ font-size:1.6rem; margin:0 0 6px; line-height:1.05; }
+.bn-text p{ margin:0; color:var(--muted); font-size:0.98rem; }
+
+/* small KPI chips */
+.bn-kpis{ display:flex; gap:14px; align-items:center; color:var(--muted); font-size:0.9rem; }
+.bn-kpis div{ text-align:center; }
+.bn-kpis strong{ display:block; font-weight:700; color: #0b1220; }
+
+/* grid layout */
+.bn-grid{ display:grid; grid-template-columns: 1fr 340px; gap:28px; align-items:start; }
+@media (max-width:980px){ .bn-grid{ grid-template-columns: 1fr; } }
+
+/* package list */
+.package-list{ list-style:none; padding:0; margin:0; display:grid; gap:16px; grid-template-columns:repeat(2,1fr); }
+@media (max-width:700px){ .package-list{ grid-template-columns:1fr; } }
+
+.pkg-card{
+  background:var(--card); border-radius:12px; padding:16px; box-shadow:var(--shadow);
+  display:flex; flex-direction:column; gap:10px; border:1px solid rgba(11,18,32,0.04);
+}
+.pkg-card.recommended{ transform:translateY(-6px); border:2px solid rgba(11,132,255,0.12); box-shadow:0 10px 30px rgba(11,132,255,0.06); }
+.pkg-header{ display:flex; justify-content:space-between; align-items:center; gap:10px; }
+.pkg-header h4{ margin:0; font-size:1.05rem; }
+.pkg-price{ text-align:right; font-weight:700; color:#0b1220; }
+.pkg-price .price{ font-size:1.15rem; display:inline-block; margin-right:6px; }
+.pkg-desc{ margin:0; color:var(--muted); font-size:0.95rem; }
+.pkg-feats{ margin:0; padding-left:16px; color:var(--muted); font-size:0.92rem; }
+.pkg-feats li{ margin:6px 0; }
+
+/* buttons */
+.btn-primary, .btn-ghost{
+  display:inline-block; border-radius:10px; padding:10px 12px; font-weight:600; cursor:pointer;
+}
+.btn-primary{ background:linear-gradient(90deg,var(--accent), #006fe6); color:white; border:none; }
+.btn-ghost{ background:transparent; color:var(--accent); border:1px solid rgba(11,132,255,0.12); }
+
+/* quick booking aside */
+.quick-book{ background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0)); border-radius:12px; padding:16px; position:sticky; top:24px; align-self:start; border:1px solid rgba(11,18,32,0.04); box-shadow:var(--shadow); }
+@media (max-width:980px){ .quick-book{ position:relative; top:auto; } }
+.quick-book h3{ margin:0 0 10px; font-size:1.1rem; }
+.quick-form{ display:flex; flex-direction:column; gap:10px; }
+.quick-form label{ font-size:0.85rem; color:var(--muted); }
+.quick-form input, .quick-form select, .quick-form textarea{
+  padding:10px; border-radius:8px; border:1px solid rgba(11,18,32,0.06); font-size:0.95rem; outline: none;
+}
+.quick-form input:focus, .quick-form select:focus, .quick-form textarea:focus{
+  box-shadow:0 0 0 4px rgba(11,132,255,0.06);
+  border-color:var(--accent);
+}
+.small-muted{ color:var(--muted); font-size:0.85rem; margin:8px 0 0; }
+
+/* footer trust */
+.bn-footer{ margin-top:18px; display:flex; align-items:center; gap:12px; }
+.bn-footer .trust{ display:flex; align-items:center; gap:8px; color:var(--muted); font-size:0.92rem; margin:0; }
+.lock{ width:18px; height:18px; fill:transparent; stroke:currentColor; stroke-width:0.0; }
+
+/* utility */
+.sr-only{ position:absolute !important; height:1px; width:1px; overflow:hidden; clip:rect(1px,1px,1px,1px); white-space:nowrap; }
+.wide{ width:100%; }
+
+/* accessibility focus */
+:focus { outline: none; }
+button:focus, a:focus, input:focus, select:focus, textarea:focus { outline: 3px solid rgba(11,132,255,0.12); border-radius:8px; }
+
+</style>
+
+
+
+<style>
+:root {
+  --accent: chocolate;
+  --muted: #6b7280;
+  --card-bg: #fff;
+  --shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+.why-section { padding: 60px 20px; background: #f9fafb; color: #0b1220; }
+.why-section .wrap { max-width: 1000px; margin: 0 auto; }
+.why-section h2 { text-align: center; font-size: 2rem; margin-bottom: 40px; }
+.reasons { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; margin-bottom: 50px; }
+.reason { background: var(--card-bg); border-radius: 10px; box-shadow: var(--shadow); padding: 20px; flex: 1 1 250px; }
+.reason h3 { margin-top: 0; color: var(--accent); }
+.reason p { margin-bottom: 0; color: var(--muted); }
+
+.testimonials-gallery { display: grid; grid-template-columns: 1fr 2fr; gap: 30px; align-items: start; }
+@media (max-width:800px) {
+  .testimonials-gallery { grid-template-columns: 1fr; }
+}
+.testimonial { background: var(--card-bg); border-left: 4px solid var(--accent); padding: 20px; box-shadow: var(--shadow); font-style: italic; }
+.testimonial footer { margin-top: 8px; font-style: normal; text-align: right; color: var(--muted); }
+
+.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 10px; }
+.gallery img { width: 100%; border-radius: 6px; object-fit: cover; }
+
+</style>
+
+<footer class="myfooter" id="footer">
+  <article class="bloc">
+    <div>
+      <h4><span class="always">TiPee Global</span> 2025.</h4>
+      <div class="bloc1">
+        <ul class="footnav">
+        <li><a href="#footer" class="Inquire" onclick="alert('For More Info Call: 08160228997')">Help Centre</a></li>
+        <li><a href="#footer" class="Inquire" onclick="alert('For More Info Call: 08160228997')">Privacy Policy</a></li>
+        <li><a href="#footer" class="Inquire" onclick="alert('For More Info Call: 08160228997')">Ad Center</a></li>
+        <li><a href="#footer" class="Inquire" onclick="alert('For More Info Call: 08160228997')">Jobs</a></li>
+        </ul>
+        <a href=""><img src="img/icons8-whatsapp.gif" alt=""></a>
+        <a href=""><img src="img/icons8-whatsapp.gif" alt=""></a>
+        <a href=""><img src="img/icons8-whatsapp.gif" alt=""></a>
+      </div>
+    </div>
+    <div>
+      <h4 class="always">Reach out to us</h4><br><br>
+      <p>Imikans plaza by hospital junction along Eneka Igbo-Etche road.</p><br>
+      <p><a href="mailto:byfiplayglobal@gmail.com" class="Inquire">byfiplayglobal@gmail.com</a></p><br>
+      <p><a href="tel:+2349169019241" class="Inquire">08160228997 or 08124133711</a></p>
+      <hr>
+    </div>
+  </article>
+</footer>
+
+
+
+<!-- Floating WhatsApp Chat — bottom-right -->
+<a
+  href="https:
+wa.link/fiolto"
+  target="_blank"
+  rel="noopener"
+  class="whatsapp-fab"
+  aria-label="Open WhatsApp live chat"
+>
+  <div class="whatsapp-fab__icon" aria-hidden="true">
+    <!-- Simple WhatsApp SVG icon -->
+    <svg viewBox="0 0 32 32" width="22" height="22">
+      <path d="M19.1 17.3c-.2-.1-1-.4-1.1-.5-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.2.2-.4.2-.6.1-1.7-.7-3-2.2-3.4-2.7-.2-.2-.2-.4-.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.6-1.5-.8-2.1-.2-.6-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2 0 1.3 1 2.5 1.1 2.6.1.2 2 3.1 4.8 4.2 2.8 1.1 2.8.7 3.3.7.5 0 1.6-.6 1.8-1.2.2-.6.2-1.1.2-1.2 0-.1-.2-.1-.4-.2zM16 3C8.8 3 3 8.8 3 16c0 2.3.6 4.4 1.7 6.3L3 29l6.9-1.8C11.7 28.4 13.8 29 16 29c7.2 0 13-5.8 13-13S23.2 3 16 3zm0 23.5c-2 0-3.9-.6-5.5-1.7l-.4-.2-4.1 1.1 1.1-4.1-.2-.4C5.6 19.5 5 17.7 5 16 5 9.9 9.9 5 16 5s11 4.9 11 11-4.9 10.5-11 10.5z"/>
+    </svg>
+  </div>
+  <div class="whatsapp-fab__text">
+    <h3>Open Live Chat</h3>
+    <p>We are online!</p>
+  </div>
+</a>
+
+<style>
+  .whatsapp-fab {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    box-shadow: 0 10px 24px rgba(0,0,0,.18);
+    z-index: 9999;
+    /* Background color cycle every 5s (4 colors = 20s total) */
+    animation: fabBgCycle 20s steps(4, end) infinite;
+  }
+
+  .whatsapp-fab__icon {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.15);
+    flex-shrink: 0;
+  }
+
+  .whatsapp-fab__text {
+    line-height: 1.1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .whatsapp-fab__text strong {
+    font: 600 14px/1.1 system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  }
+  .whatsapp-fab__text span {
+    opacity: .9;
+    font-size: 12px;
+  }
+
+  /* Color cycle */
+  @keyframes fabBgCycle {
+    0%   { background: #25D366; }  /* WhatsApp green */
+    25%  { background: #1DA1F2; }  /* blue */
+    50%  { background: #8A2BE2; }  /* purple */
+    75%  { background: #FF7A00; }  /* orange */
+    100% { background: #25D366; }  /* back to green */
+  }
+
+  /* Hover/focus */
+  .whatsapp-fab:focus-visible {
+    outline: 3px solid rgba(37, 211, 102, .6);
+    outline-offset: 3px;
+  }
+
+  /* Small screens: keep it compact */
+  @media (max-width: 480px) {
+    .whatsapp-fab {
+      padding: 10px 12px;
+    }
+    .whatsapp-fab__icon { width: 36px; height: 36px; }
+    .whatsapp-fab__text strong { font-size: 13px; }
+    .whatsapp-fab__text span { font-size: 11px; }
+  }
+</style>
+<script src="js/index.js"></script>
+</body>
+</html>

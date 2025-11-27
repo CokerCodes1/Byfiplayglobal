@@ -1,0 +1,220 @@
+/*the mediaquery css file must be under your main stylesheet*/
+
+/* Nest Hub Max */
+@media screen and (max-width: 1280px) {
+    
+}
+
+
+/* Nest Hub */
+@media screen and (max-width: 1024px) {
+    .hero-content h1 {
+       font-size: 6rem !important;
+}
+}
+/* Surface Pro 7 */
+@media screen and (max-width: 912px) {
+    .hero{
+        height: 38vh;
+    }
+    #sec1{
+        height: 100%;
+    }
+    .auto{
+        height: 100% !important;
+        z-index: +5;
+    }
+    .disappear{
+        display: none !important;
+    }
+}
+
+/* For iPad Air */
+@media screen and (max-width: 820px) {
+    .fanbase{
+        height: 100vh !important;
+    }
+    .testimonial-slider{
+        margin-top: 20% !important;
+    }
+    .logoslide{
+        height: 30vh !important;
+    }
+}
+
+/* For iPad Mini */
+@media screen and (max-width: 768px) {
+    .hero{
+        height: 50vh;
+    }
+    .hero-video{
+        height: 50vh !important;
+    }
+    .footnav{
+        flex-direction: column !important;
+    }
+}
+
+/* For Surface Duo */
+@media screen and (max-width: 540px) {
+    .hero{
+        height: 55vh !important;
+        margin-bottom: 10%;
+    }
+    
+    .hero video{
+        height: 60vh !important;
+    }
+    .hero-content h1 {
+       font-size: 2rem !important;
+       margin-bottom: 4%;
+    }   
+    .hero-content p{
+        font-size: 1rem !important;
+    }
+    #art1 h1{
+        font-size: 40px !important;
+    }
+    #art1 h3{
+        font-size: 25px !important;
+    }
+    .autotext h1{
+        font-size: 45px !important;
+    }
+    .headings h1{
+        font-size: 30px !important;
+    }
+    .upload h1{
+        font-size: 40px !important;
+    }
+    .upload h3{
+        font-size: 30px !important;
+    }
+    .fanbase{
+        height: 200vh !important;
+    }
+    .fandiv h1{
+        font-size: 30px !important;
+    }
+    .fandiv p{
+        font-size: 15px !important;
+    }
+    .hide{
+        display: none;
+    }
+    .testimonial-slider h1{
+        font-size: 30px !important;
+    }
+    .testimonial-slider h4{
+        font-size: 20px !important;
+    }
+    .footnav{
+        flex-direction: column;
+    }
+    .auto{
+        height: 50vh !important;
+        z-index: +5;
+    }
+    .auto h1{
+        font-size: 30px !important;
+    }
+    .auto p{
+        font-size: 15px !important;
+    }
+    #wrapper h1{
+        font-size: 30px !important;
+    }
+    #curlwrap{
+        flex-direction: column !important;
+    }
+    .curldiv{
+        width: 100% !important;
+        margin: 2% !important;
+    }
+    #desc{
+        margin-bottom: 15%;
+    }
+    .descart{
+        flex-direction: column !important;
+    }
+    .desch1{
+        width: 100% !important;
+    }
+    .descart div{
+        width: 100% !important;
+    }
+    #plus{
+        margin-bottom: 20% !important;
+    }
+    .plusart{
+        flex-direction: column !important;
+    }
+    .plusart div{
+        width: 100% !important;
+        margin-bottom: 20% !important;
+    }
+    #why_art{
+        flex-direction: column;
+    }
+    #why_art div{
+        width: 100% !important;
+    }
+    .p{
+        font-size: 2rem !important;
+    }
+    .why0{
+        flex-direction: column;
+    }
+    .why1{
+        width: 100% !important;
+    }
+    .my-testimonial-slider h1{
+        font-size: 2rem;
+        margin-top: 15%;
+    }
+    .mts-slide-content{
+        flex-direction: column !important;
+    }
+}
+
+/* iPhone XR */
+@media screen and (max-width: 414px) {
+    #fandiv{
+        height: 100vh !important;
+    }
+    .fandiv h1{
+        font-size: 20px !important;
+    }
+    .fandiv p{
+        font-size: 15px !important;
+    }
+}
+
+@media screen and (max-width: 412px) {
+    
+}
+
+@media screen and (max-width: 393px) {
+    
+}
+
+/* For iPhone 12 Pro */
+@media screen and (max-width: 390px) {
+    
+}
+
+@media screen and (max-width: 375px) {
+    
+}
+
+@media screen and (max-width: 360px) {
+    
+}
+
+@media screen and (max-width: 320px) {
+    
+}
+
+@media screen and (max-width: 280px) {
+    
+}
