@@ -70,6 +70,9 @@
     .nlogo{
         width: 35%;
     }
+    .be{
+        font-size: 3rem !important;
+    }
     .my-testimonial-slider .mts-control{
         top: 87% !important;
     }
