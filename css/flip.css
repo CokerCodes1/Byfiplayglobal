@@ -12,7 +12,7 @@
 
 #flippy {
   margin: 0;
-  background: black;
+  background: whitesmoke;
   color: var(--text);
   display: grid;
   place-items: center;
@@ -100,10 +100,10 @@
 /* Base styles for the demo page */
 .tour-btn {
   position: relative;
-  border: none;
-  border-radius: 10%;
-  background-color: #ff5722; /* Accent color */
-  color: #ffffff;
+  border: 2px solid gray;
+  border-radius: 10px;
+  background-color: whitesmoke; /* Accent color */
+  color: black;
   font-size: 1.2rem;
   font-weight: bold;
   cursor: pointer;

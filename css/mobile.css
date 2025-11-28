@@ -61,7 +61,22 @@
         height: 55vh !important;
         margin-bottom: 10%;
     }
-    
+    .dv-wrapper{
+        flex-direction: column;
+    }
+    .dv-wrapper div{
+        width: 100%;
+    }
+    .nlogo{
+        width: 35%;
+    }
+    .my-testimonial-slider .mts-control{
+        top: 87% !important;
+    }
+    .curldiv img{
+        width: 100%;
+        border-radius: 0px !important;
+    }
     .hero video{
         height: 60vh !important;
     }
