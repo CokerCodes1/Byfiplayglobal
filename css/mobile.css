@@ -61,6 +61,9 @@
         height: 55vh !important;
         margin-bottom: 10%;
     }
+    .whatsapp-fab__text h3{
+        display: none;
+    }
     .dv-wrapper{
         flex-direction: column;
     }
