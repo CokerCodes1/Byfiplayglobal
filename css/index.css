@@ -19,24 +19,21 @@
 }
 
 .navbar-container {
-  max-width: 1200px;
+  width: 100%;
   margin: auto;
-  padding: 1rem 2rem;
+  padding: 2%;
+  padding-left: 6%;
+  padding-right: 6%;
   display: flex;
   align-items: center;
 }
 
-.logo {
-  font-size: 2.5rem;
-  font-weight: 900;
-  color: whitesmoke;
-  text-decoration: none;
-  width: 5%;
+.nlogo {
+  width: 100%;
 }
-.logo:hover{
-    color: chocolate !important;
+.logo-holder{
+  width: 7%;
 }
-
 .secondColor{
     color: chocolate;
 }
@@ -71,7 +68,7 @@
 }
 
 .hamburger{
-    width: 60% !important;
+    width: 50% !important;
     margin: 1%;
     margin-left: auto;
     display: flex;
@@ -523,7 +520,7 @@ button a:hover{
 
 .my-testimonial-slider .mts-testimonial-text {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: #333;
   margin-bottom: 8px;
 }
@@ -535,7 +532,6 @@ button a:hover{
 }
 
 .my-testimonial-slider .mts-client-name {
-  font-weight: bold;
   color: chocolate !important;
 }
 

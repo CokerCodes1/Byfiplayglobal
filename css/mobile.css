@@ -68,10 +68,13 @@
         width: 100%;
     }
     .nlogo{
-        width: 35%;
+        width: 40%;
     }
     .be{
         font-size: 3rem !important;
+    }
+    .logo-holder{
+        width: 30%;
     }
     .my-testimonial-slider .mts-control{
         top: 87% !important;
@@ -128,6 +131,9 @@
     }
     .footnav{
         flex-direction: column;
+    }
+    .footnav li{
+        width: 100% !important;
     }
     .auto{
         height: 50vh !important;
