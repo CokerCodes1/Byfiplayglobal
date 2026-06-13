@@ -2,7 +2,7 @@
  * ByfiPlay PWA Module — byfiplayglobal.com.ng
  * ----------------------------------------------
  * 1. Registers service worker at /service-worker.js (scope: /)
- * 2. Custom install banner (beforeinstallprompt + iOS fallback)
+ * 2. Navbar install button (beforeinstallprompt + iOS fallback)
  * 3. "New version available" update notification with one-click refresh
  */
 
@@ -10,12 +10,8 @@
   'use strict';
 
   var deferredInstallPrompt = null;
-  var installBannerEl = null;
   var updateBannerEl = null;
   var waitingWorker = null;
-
-  var DISMISS_KEY = 'byfiplay-pwa-install-dismissed';
-  var DISMISS_DAYS = 7;
 
   /* ---------- Service Worker Registration ---------- */
 
@@ -30,7 +26,6 @@
         .then(function (registration) {
           listenForUpdates(registration);
 
-          /* Check for an already-waiting worker on page load */
           if (registration.waiting && navigator.serviceWorker.controller) {
             waitingWorker = registration.waiting;
             showUpdateBanner();
@@ -57,7 +52,6 @@
           console.warn('[PWA] Service worker registration failed:', err);
         });
 
-      /* Reload once the new service worker takes control */
       var refreshing = false;
       navigator.serviceWorker.addEventListener('controllerchange', function () {
         if (refreshing) {
@@ -109,75 +103,58 @@
   }
 
   function listenForUpdates(registration) {
-    /* Re-check every hour while the tab is open */
     setInterval(function () {
       registration.update();
     }, 60 * 60 * 1000);
   }
 
-  /* ---------- Install Banner ---------- */
+  /* ---------- Navbar Install Button ---------- */
 
-  function wasRecentlyDismissed() {
-    try {
-      var dismissedAt = localStorage.getItem(DISMISS_KEY);
-      if (!dismissedAt) {
-        return false;
+  function showNavInstallButtons() {
+    var navBtn = document.getElementById('pwa-nav-install-btn');
+    var mobileWrap = document.getElementById('pwa-nav-install-mobile-wrap');
+
+    if (navBtn) {
+      navBtn.hidden = false;
+    }
+    if (mobileWrap) {
+      mobileWrap.hidden = false;
+    }
+  }
+
+  function hideNavInstallButtons() {
+    var navBtn = document.getElementById('pwa-nav-install-btn');
+    var mobileWrap = document.getElementById('pwa-nav-install-mobile-wrap');
+
+    if (navBtn) {
+      navBtn.hidden = true;
+    }
+    if (mobileWrap) {
+      mobileWrap.hidden = true;
+    }
+  }
+
+  function initNavInstallButtons() {
+    var navBtn = document.getElementById('pwa-nav-install-btn');
+    var mobileBtn = document.getElementById('pwa-nav-install-btn-mobile');
+
+    function onInstallClick() {
+      if (deferredInstallPrompt) {
+        handleInstallClick();
+        return;
       }
-      var elapsed = Date.now() - parseInt(dismissedAt, 10);
-      return elapsed < DISMISS_DAYS * 24 * 60 * 60 * 1000;
-    } catch (e) {
-      return false;
-    }
-  }
 
-  function dismissInstallBanner() {
-    if (installBannerEl) {
-      installBannerEl.classList.remove('is-visible');
-    }
-    try {
-      localStorage.setItem(DISMISS_KEY, String(Date.now()));
-    } catch (e) {
-      /* storage unavailable */
-    }
-  }
-
-  function createInstallBanner(options) {
-    if (installBannerEl || wasRecentlyDismissed()) {
-      return;
+      if (isIosSafari()) {
+        showIosInstallInstructions();
+      }
     }
 
-    installBannerEl = document.createElement('aside');
-    installBannerEl.className = 'pwa-install-banner';
-    installBannerEl.setAttribute('role', 'dialog');
-    installBannerEl.setAttribute('aria-label', 'Install ByfiPlay app');
-
-    installBannerEl.innerHTML =
-      '<img class="pwa-install-banner__icon" src="/img/IMG-20251201-WA0006.jpg" alt="" width="44" height="44">' +
-      '<div class="pwa-install-banner__content">' +
-      '<p class="pwa-install-banner__title">Install ByfiPlay</p>' +
-      '<p class="pwa-install-banner__text">' +
-      (options.message ||
-        'Add ByfiPlay to your home screen for quick access.') +
-      '</p>' +
-      '</div>' +
-      '<div class="pwa-install-banner__actions">' +
-      (options.showInstallButton
-        ? '<button type="button" class="pwa-install-banner__btn pwa-install-banner__btn--install" id="pwa-install-btn">Install</button>'
-        : '') +
-      '<button type="button" class="pwa-install-banner__btn pwa-install-banner__btn--dismiss" id="pwa-dismiss-btn" aria-label="Dismiss">&times;</button>' +
-      '</div>';
-
-    document.body.appendChild(installBannerEl);
-
-    document.getElementById('pwa-dismiss-btn').addEventListener('click', dismissInstallBanner);
-
-    if (options.showInstallButton) {
-      document.getElementById('pwa-install-btn').addEventListener('click', handleInstallClick);
+    if (navBtn) {
+      navBtn.addEventListener('click', onInstallClick);
     }
-
-    requestAnimationFrame(function () {
-      installBannerEl.classList.add('is-visible');
-    });
+    if (mobileBtn) {
+      mobileBtn.addEventListener('click', onInstallClick);
+    }
   }
 
   function handleInstallClick() {
@@ -189,18 +166,30 @@
 
     deferredInstallPrompt.userChoice.then(function (choice) {
       if (choice.outcome === 'accepted') {
-        dismissInstallBanner();
+        hideNavInstallButtons();
       }
       deferredInstallPrompt = null;
     });
+  }
+
+  function showIosInstallInstructions() {
+    window.alert(
+      'To install ByfiPlay on your iPhone or iPad:\n\n' +
+        '1. Tap the Share button (square with arrow)\n' +
+        '2. Scroll down and tap "Add to Home Screen"\n' +
+        '3. Tap "Add" to confirm'
+    );
   }
 
   /* ---------- Platform Detection ---------- */
 
   function isIosSafari() {
     var ua = window.navigator.userAgent;
-    var isIOS = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-    var isSafari = /Safari/.test(ua) && !/CriOS|FxiOS|EdgiOS|OPiOS|Chrome/.test(ua);
+    var isIOS =
+      /iPad|iPhone|iPod/.test(ua) ||
+      (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    var isSafari =
+      /Safari/.test(ua) && !/CriOS|FxiOS|EdgiOS|OPiOS|Chrome/.test(ua);
     return isIOS && isSafari;
   }
 
@@ -215,36 +204,30 @@
 
   function initInstallPrompt() {
     if (isStandalone()) {
+      hideNavInstallButtons();
       return;
     }
 
     window.addEventListener('beforeinstallprompt', function (event) {
       event.preventDefault();
       deferredInstallPrompt = event;
-      createInstallBanner({
-        showInstallButton: true,
-        message:
-          'Install ByfiPlay on your device for a fast, app-like experience.'
-      });
+      showNavInstallButtons();
     });
 
     window.addEventListener('appinstalled', function () {
       deferredInstallPrompt = null;
-      dismissInstallBanner();
+      hideNavInstallButtons();
     });
 
     if (isIosSafari()) {
-      createInstallBanner({
-        showInstallButton: false,
-        message:
-          'Tap the Share button, then choose "Add to Home Screen" to install ByfiPlay.'
-      });
+      showNavInstallButtons();
     }
   }
 
   /* ---------- Boot ---------- */
 
   registerServiceWorker();
+  initNavInstallButtons();
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initInstallPrompt);

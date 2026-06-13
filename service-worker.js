@@ -9,7 +9,7 @@
  * Bump CACHE_VERSION on every production deploy that changes cached assets.
  */
 
-const CACHE_VERSION = 'byfiplay-v2.0.0';
+const CACHE_VERSION = 'byfiplay-v2.0.1';
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
 
