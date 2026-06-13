@@ -1,0 +1,70 @@
+{
+  "id": "/",
+  "name": "ByfiPlay – Ultimate Hub For Non Stop Entertainment Solutions",
+  "short_name": "ByfiPlay",
+  "description": "ByfiPlay helps musicians and event planners boost their brands securely and instantly. Music promotion, studio recording, and sound system booking.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#D2691E",
+  "background_color": "#FFFFFF",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["music", "entertainment", "business"],
+  "icons": [
+    {
+      "src": "/img/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/img/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/img/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Promote Music",
+      "short_name": "Music",
+      "description": "Upload and promote your music globally",
+      "url": "/artiste.html",
+      "icons": [{ "src": "/img/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "Book Sound System",
+      "short_name": "Sound",
+      "description": "Book professional sound systems for events",
+      "url": "/sound.html",
+      "icons": [{ "src": "/img/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "Studio Recording",
+      "short_name": "Studio",
+      "description": "Book a professional studio recording session",
+      "url": "/studio.html",
+      "icons": [{ "src": "/img/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    }
+  ]
+}
